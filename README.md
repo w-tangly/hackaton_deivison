@@ -356,8 +356,17 @@ O protótipo das telas e do fluxo de navegação foi desenvolvido no Figma:
 
 ---
 
-## Aplicação
+## Projeto
 
+### Frontend
+
+Frontend desenvolvido dentro desse próprio repositório
+
+### Backend
+
+* [Link do repositório do backend](https://github.com/gabrielcamargogsilva/hackathon_api.git) *
+
+### Hospedagem
 A versão final hospedada e aberta para testes pode ser acessada em:
 * [Link do Deploy (Vercel/Netlify)](#) *(substitua pelo link do deploy)*
 
