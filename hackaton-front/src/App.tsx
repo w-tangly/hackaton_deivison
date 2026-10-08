@@ -1,33 +1,38 @@
-import { BrowserRouter as Router, Outlet, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import Sidebar from './pages/Sidebar';
 import Header from './pages/Header';
 import Dashboard from './pages/Dashboard';
 import { PlayerProvider } from './pages/PlayerContext';
+import Aprender from './pages/aprender';
+import Trilha from './pages/Trilha';
 
 function DashboardLayout() {
   return (
-    <div className="min-h-screen bg-surface text-on-surface font-body-md">
-      <Sidebar />
-      <Header />
-      <Outlet />
-    </div>
+    <PlayerProvider>
+      <div className="min-h-screen bg-surface text-on-surface font-body-md">
+        <Sidebar />
+        <Header />
+        <Outlet />
+      </div>
+    </PlayerProvider>
   );
 }
 
 export default function App() {
   return (
-    <PlayerProvider>
-      <Router>
-        <Routes>
-          <Route element={<DashboardLayout />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/aprender" element={<Dashboard />} />
-            <Route path="/ranking" element={<Dashboard />} />
-            <Route path="/conquistas" element={<Dashboard />} />
-            <Route path="/perfil" element={<Dashboard />} />
-          </Route>
-        </Routes>
-      </Router>
-    </PlayerProvider>
+    <Router>
+      <Routes>
+        <Route path="/trilha" element={<Trilha />} />
+        <Route path="/quiz" element={<Aprender />} />
+        <Route element={<DashboardLayout />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/aprender" element={<Dashboard />} />
+          <Route path="/ranking" element={<Dashboard />} />
+          <Route path="/conquistas" element={<Dashboard />} />
+          <Route path="/perfil" element={<Dashboard />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
   );
 }

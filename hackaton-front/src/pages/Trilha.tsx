@@ -4,6 +4,7 @@ import {
   Zap, Layout, CheckSquare,
   Clock, BookMarked, Video
 } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 import './Trilha.css';
 
 // --- DADOS MOCKADOS ---
@@ -115,21 +116,21 @@ export default function Trilha() {
         </div>
 
         <nav className="flex-1 px-4 space-y-1.5">
-          <a href="#" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
+          <NavLink to="/" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
             <Home size={20} strokeWidth={2.5} /> Início
-          </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-blue-600 text-white font-medium shadow-[0_4px_12px_rgba(37,99,235,0.2)]">
+          </NavLink>
+          <NavLink to="/aprender" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
             <BookOpen size={20} strokeWidth={2.5} /> Aprender
-          </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
+          </NavLink>
+          <NavLink to="/ranking" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
             <BarChart2 size={20} strokeWidth={2.5} /> Ranking
-          </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
+          </NavLink>
+          <NavLink to="/conquistas" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
             <Award size={20} strokeWidth={2.5} /> Conquistas
-          </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
+          </NavLink>
+          <NavLink to="/perfil" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
             <User size={20} strokeWidth={2.5} /> Meu Perfil
-          </a>
+          </NavLink>
         </nav>
       </aside>
 
