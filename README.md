@@ -119,7 +119,7 @@ A tabela a seguir compara a proposta do **Hackaton_Gramatics** com 5 plataformas
 
 ### Inteligência Artificial
 
-Ferramenta: Claude, Kilo Code (Laguna S 2.1), Chat GPT, Google Stitch 
+Ferramenta: Claude, Kilo Code (Laguna S 2.1; Nemotron 3 Ultra), Chat GPT, Google Stitch 
 
 Utilização:
 - geração de ideias;
