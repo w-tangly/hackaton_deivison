@@ -1,18 +1,33 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Trilha from './pages/Trilha'; // Ajuste o caminho de importação conforme sua pasta
+import { BrowserRouter as Router, Outlet, Route, Routes } from 'react-router-dom';
+import Sidebar from './pages/Sidebar';
+import Header from './pages/Header';
+import Dashboard from './pages/Dashboard';
+import { PlayerProvider } from './pages/PlayerContext';
+
+function DashboardLayout() {
+  return (
+    <div className="min-h-screen bg-surface text-on-surface font-body-md">
+      <Sidebar />
+      <Header />
+      <Outlet />
+    </div>
+  );
+}
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Rota principal apontando para a página que acabamos de criar */}
-        <Route path="/" element={<Trilha />} />
-
-        {/* Você pode adicionar as outras páginas do menu lateral aqui no futuro */}
-        {/* <Route path="/inicio" element={<Inicio />} /> */}
-        {/* <Route path="/ranking" element={<Ranking />} /> */}
-        {/* <Route path="/perfil" element={<Perfil />} /> */}
-      </Routes>
-    </BrowserRouter>
+    <PlayerProvider>
+      <Router>
+        <Routes>
+          <Route element={<DashboardLayout />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/aprender" element={<Dashboard />} />
+            <Route path="/ranking" element={<Dashboard />} />
+            <Route path="/conquistas" element={<Dashboard />} />
+            <Route path="/perfil" element={<Dashboard />} />
+          </Route>
+        </Routes>
+      </Router>
+    </PlayerProvider>
   );
 }
