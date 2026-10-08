@@ -1,0 +1,26 @@
+/* Trilha.css */
+
+/* Esconde a scrollbar na área central e lateral, mas permite o scroll */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ajuste fino para a linha vertical contínua da trilha */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 19px; /* Alinhamento exato do centro do círculo */
+  width: 2px;
+  background-color: #E2E8F0; /* slate-200 */
+  z-index: 0;
+}
