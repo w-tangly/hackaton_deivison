@@ -13,6 +13,8 @@ const Sidebar: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Início', icon: 'cottage' },
     { path: '/aprender', label: 'Aprender', icon: 'menu_book' },
+    { path: '/trilha', label: 'Trilha', icon: 'route' },
+    { path: '/quiz', label: 'Praticar', icon: 'quiz' },
     { path: '/ranking', label: 'Ranking', icon: 'leaderboard' },
     { path: '/conquistas', label: 'Conquistas', icon: 'military_tech' },
     { path: '/perfil', label: 'Meu Perfil', icon: 'person' },
@@ -37,6 +39,7 @@ const Sidebar: React.FC = () => {
             <NavLink
               key={item.path}
               to={item.path}
+              end={item.path === '/'}
               className={({ isActive }) =>
                 `flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all ${
                   isActive ? 'bg-primary-container text-on-primary-container font-bold shadow-primary-glow' : ''

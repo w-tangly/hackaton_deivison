@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./aprender.css";
 
 type Option = { id: string; text: string; tag?: string };
@@ -24,7 +25,7 @@ const QUESTION = {
 
 const PREPOSICOES = ["em", "a", "na"];
 
-export default function App() {
+export default function Aprender() {
   const [resposta, setResposta] = useState<string | null>(null);
   const [prep, setPrep] = useState<string | null>(null);
   const respondeu = resposta !== null;
@@ -38,11 +39,13 @@ export default function App() {
           <strong>Língua Viva</strong>
         </div>
         <nav>
-          {["Início", "Aprender", "Ranking", "Conquistas", "Meu Perfil"].map((i) => (
-            <a key={i} className={i === "Aprender" ? "active" : ""} href="#">
-              {i}
-            </a>
-          ))}
+          <NavLink to="/">Início</NavLink>
+          <NavLink to="/aprender">Aprender</NavLink>
+          <NavLink to="/trilha">Trilha</NavLink>
+          <NavLink to="/quiz">Praticar</NavLink>
+          <NavLink to="/ranking">Ranking</NavLink>
+          <NavLink to="/conquistas">Conquistas</NavLink>
+          <NavLink to="/perfil">Meu Perfil</NavLink>
         </nav>
         <div className="user-card">
           <div className="avatar" />
