@@ -70,16 +70,29 @@ A tabela a seguir compara a proposta do **Hackaton_Gramatics** com 5 plataformas
 ## Requisitos
 
 ### Requisitos Funcionais (RF)
-* **RF01:** O sistema deve permitir a navegação entre os três modos de estudo: Flashcards, Quiz e Preenchimento de Lacunas.
-* **RF02:** O modo *Flashcards* deve permitir a virada do cartão ao clicar para revelar a resposta/explicação.
-* **RF03:** O modo *Quiz* deve apresentar perguntas de múltipla escolha e contabilizar a pontuação final do usuário.
-* **RF04:** O modo *Preenchimento de Lacunas* deve validar as respostas digitadas pelo usuário e fornecer feedback de acerto/erro.
-* **RF05:** O sistema deve exibir explicações educativas para os erros cometidos nos testes.
+- **RF01**: O sistema deve permitir ao usuário estudar tópicos gramaticais por meio de conjuntos de **Flashcards** interativos (frente com pergunta/regra, verso com resposta/explicação).
+- **RF02**: O sistema deve disponibilizar **Quizzes de Múltipla Escolha** categorizados por temas gramaticais (ex: crase, concordância, regência, pontuação).
+- **RF03**: O sistema deve oferecer atividades de **Preenchimento de Lacunas** em frases e textos completos.
+- **RF04**: O sistema deve fornecer **feedback imediato** após a realização de cada questão/lacuna, indicando acerto/erro e a justificativa gramatical.
+- **RF05**: O sistema deve permitir o **cadastro e autenticação** de usuários (estudantes e professores).
+- **RF06**: O sistema deve manter um **Painel do Estudante (Dashboard)** exibindo o histórico de desempenho, taxa de acertos e tempo dedicado.
+- **RF07**: O sistema deve implementar elementos de **gamificação**, concedendo pontuações, níveis e medalhas de conquista conforme o progresso do usuário.
+- **RF08**: O sistema deve permitir ao usuário **filtrar e selecionar módulos de estudo** por nível de dificuldade (Básico, Intermediário e Avançado) ou tema gramatical.
+- **RF09**: O sistema deve oferecer um **Modo de Revisão**, apresentando novamente os flashcards e questões em que o usuário obteve erros anteriores.
+- **RF10**: O sistema deve permitir que usuários com perfil administrativo/professor **cadastrem, editem e removam** novos conjuntos de questões e flashcards.
+- **RF11**: O sistema deve permitir ao usuário **favoritar ou salvar** flashcards específicos para consulta rápida posterior.
 
-### Requisitos Não-Funcionais (RNF)
-* **RNF01:** A interface deve ser totalmente responsiva, adaptando-se a dispositivos móveis e desktops.
-* **RNF02:** O sistema deve ter tempo de resposta inferior a 2 segundos nas interações.
-* **RNF03:** A interface deve seguir boas práticas de acessibilidade e usabilidade (design limpo e intuitivo).
+### Requisitos Não Funcionais (RNF)
+- **RNF01 (Acessibilidade)**: A interface deve seguir as diretrizes da WCAG (Web Content Accessibility Guidelines), suportando alto contraste, leitor de tela e navegação inteiramente por teclado.
+- **RNF02 (Usabilidade)**: O design da interface deve ser intuitivo, limpo e responsivo, exigindo no máximo 3 cliques para o usuário iniciar qualquer atividade de estudo.
+- **RNF03 (Responsividade)**: A aplicação web deve ser totalmente adaptável para telas de smartphones, tablets e computadores desktop (Design Mobile-First).
+- **RNF04 (Desempenho)**: O tempo de carregamento inicial das páginas e a transição de exercícios não devem ultrapassar 2 segundos em conexões de internet 3G/4G padrão.
+- **RNF05 (Compatibilidade)**: A plataforma deve ser compatível com as versões mais recentes dos principais navegadores do mercado (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge).
+- **RNF06 (Disponibilidade)**: O sistema deve ter uma disponibilidade mínima estimada de 99% durante o período de testes e avaliação do hackathon.
+- **RNF07 (Segurança e Privacidade)**: As credenciais dos usuários devem ser armazenadas de forma segura (senhas encriptadas) em conformidade com as diretrizes básicas da LGPD.
+- **RNF08 (Manutenibilidade)**: O código frontend deve seguir padrão modular de componentes, promovendo facilidade de manutenção e reuso de código.
+- **RNF09 (Escalabilidade)**: A estrutura frontend e consumo de API devem ser projetados para suportar múltiplos acessos simultâneos sem perda de performance.
+- **RNF10 (Offline-first parcial / Cache)**: O sistema deve utilizar estratégias de cache web para permitir a continuidade da sessão do quiz/flashcard atual mesmo em curtas interrupções de conexão à internet.
 
 ---
 
