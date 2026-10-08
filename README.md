@@ -46,14 +46,26 @@ Oferecer uma experiência de aprendizagem interativa, leve e intuitiva da Língu
 
 ## Benchmarking
 
-| Critério / Plataforma | **Hackaton_Gramatics** | **Duolingo** | **Anki / Quizlet** |
-| :--- | :--- | :--- | :--- |
-| **Foco em Português/Gramática** | Alto (específico) | Baixo (focado em idiomas estrangeiros) | Médio (depende de listas criadas por usuários) |
-| **Variedade de Modos de Estudo** | Flashcards, Quiz e Lacunas | Exercícios variados gamificados | Predominantemente Flashcards |
-| **Acessibilidade Web Direta** | Sim (sem necessidade de cadastro complexo) | Sim (requer conta) | Sim (requer conta e configuração) |
-| **Gamificação Direcionada** | Sim (feedback e progresso rápido) | Sim (mecanismos avançados) | Baixa |
+A tabela a seguir compara a proposta do **Hackaton_Gramatics** com 5 plataformas consolidadas no mercado de edtechs e aprendizagem:
 
----
+| Critério de Comparação | **Hackaton_Gramatics** (Proposta) | **Só Português** | **Quizlet** | **Anki** | **Duolingo** | **Kahoot!** |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| **Foco em Língua Portuguesa / Gramática** | **100% Dedicado** (Ortografia, crase, concordância, sintaxe) | **100% Dedicado** | Genérico (qualquer disciplina) | Genérico (qualquer disciplina) | Focado em idiomas estrangeiros | Genérico (qualquer disciplina) |
+| **Diversidade de Modos de Estudo** | **Integrado**: Flashcards, Quiz e Preenchimento de Lacunas em uma só ferramenta | Predominantemente artigos teóricos e exercícios estáticos | Focado em Flashcards e pequenos jogos associativos | Exclusivo para Flashcards com repetição espaçada | Exercícios variados (tradução, audição, associação) | Focado em Quizzes competitivos em tempo real |
+| **Curadoria de Conteúdo Nativo** | **Pronto para uso**: Exercícios e cartões oficiais revisados | Teoria vasta, porém com pouca interatividade | Depende do próprio usuário criar ou achar listas públicas | Depende do usuário criar ou baixar baralhos de terceiros | Conteúdo nativo estruturado por níveis | Depende de professores ou usuários criarem os *kahoots* |
+| **Feedback Educativo Instantâneo** | **Sim**: Explicações didáticas após os erros para reforço pedagógico | Parcial (gabarito ao final de testes estáticos) | Baixo (apenas indica acerto ou erro) | Baixo (baseado na autoavaliação do usuário) | Sim (para regras e frases simples) | Baixo (foco no tempo de resposta e pontuação) |
+| **Experiência do Usuário (UI/UX)** | **Moderna, simples e sem distrações** | Interface datada e poluída por anúncios visuais | Moderna, porém restrita por paywalls/cadastros | Curva de aprendizado alta e interface utilitária simples | Interface altamente gamificada e atrativa | Altamente gamificado e dinâmico |
+| **Modelo de Acesso / Custo** | **Gratuito, aberto e direto na web** | Gratuito com anúncios | Freemium (recursos avançados pagos) | Gratuito (Desktop/Web/Android) e pago (iOS) | Freemium (limite de "vidas" no plano gratuito) | Freemium (limite de participantes e recursos) |
+
+### Análise Detalhada dos Concorrentes e Diferencial Competitivo
+
+1. **Só Português:** Possui excelente profundidade de conteúdo teórico sobre a norma culta, mas falha em engajar o estudante devido à interface datada e à falta de dinâmicas interativas modernas.
+2. **Quizlet:** Excelente para memorização via cartões, porém é uma ferramenta genérica onde o estudante precisa buscar ou criar o próprio material, além de ter limitações crescentes no plano gratuito.
+3. **Anki:** Referência em memorização por repetição espaçada, mas possui uma curva de aprendizado técnica e interface pouco amigável para estudantes do ensino básico.
+4. **Duolingo:** Referência em gamificação, porém seu foco é o ensino de línguas estrangeiras (ex: Inglês, Espanhol) e não o aprofundamento das regras gramaticais da norma culta da Língua Portuguesa.
+5. **Kahoot!:** Ótimo para dinâmicas em grupo em sala de aula, mas depende de mediação e não é ideal para estudo individual e contínuo de fixação de regras específicas.
+
+**Diferencial do Hackaton_Gramatics:** A solução une a **especificidade temática da Língua Portuguesa** (como o *Só Português*) à **interatividade e metodologias ativas** (como o *Quizlet* e *Kahoot!*), entregando uma experiência 100% gratuita, sem necessidade de cadastros complexos, centralizada em três formatos complementares de estudo (memorização, testagem e aplicação prática).
 
 ## Requisitos
 
@@ -105,6 +117,18 @@ Oferecer uma experiência de aprendizagem interativa, leve e intuitiva da Língu
 * **Bundler & Build Tool:** Vite
 * **Controle de Versão:** Git & GitHub
 
+### Inteligência Artificial
+
+Ferramenta: Claude, Kilo Code (Laguna S 2.1), Chat GPT, Google Stitch 
+
+Utilização:
+- geração de ideias;
+- auxílio e geração de componentes do código;
+- revisão de código;
+- identificação de erros;
+- testes de backend e APIs
+- automação e criação de cards no board do github projects
+- auxílio na documentação
 ---
 
 ## Framework Utilizado
@@ -149,16 +173,15 @@ Certifique-se de ter instalado em sua máquina:
 
 ## Protótipo
 
-O protótipo das telas e do fluxo de navegação foi desenvolvido no Figma:
-* [Link para o Protótipo no Figma](#) *(substitua pelo link real se houver)*
+O protótipo das telas e do fluxo de navegação foi desenvolvido no Stitch:
+* [Link para o Protótipo no stitch](https://stitch.google.com/projects/12329768009849964350?pli=1)
 
 ---
 
 ## Aplicação
-
 A versão final hospedada e aberta para testes pode ser acessada em:
-* [Link do Deploy (Vercel/Netlify)](#) *(substitua pelo link do deploy)*
-
+* [Link do Deploy (Vercel)](#)
+* [Link do Deploy (Render)](https://hackathonapi-two.vercel.app/)
 ---
 
 ## Processo de Desenvolvimento
@@ -166,13 +189,17 @@ A versão final hospedada e aberta para testes pode ser acessada em:
 O projeto foi construído durante a maratona do hackathon acadêmico utilizando o método **Kanban** para organização das tarefas e divisão dos componentes do Frontend:
 
 1. **Ideação e Alinhamento com a ODS 4:** Identificação do problema de aprendizagem gramatical.
-2. **Prototipagem UI/UX:** Definição da paleta de cores, tipografia acessível e layouts das telas no Figma.
+2. **Prototipagem UI/UX:** Definição da paleta de cores, tipografia acessível e layouts das telas no stitch.
 3. **Desenvolvimento Frontend:**
    * Construção da estrutura base e roteamento.
    * Componentização dos *Flashcards*, *Quiz* e *Lacunas*.
    * Estilização responsiva.
-4. **Testes de Usabilidade e Ajustes:** Revisão de feedback visual e correção de bugs.
-5. **Deploy e Documentação:** Publicação da aplicação e redação do README.
+4. **Desenvolvimento Backend:**
+   * Construção da estrutura base do banco de dados e do backend
+   * Alimentação do banco de dados
+   * Criação e testes das APIs de acesso ao backend
+6. **Testes de Usabilidade e Ajustes:** Revisão de feedback visual e correção de bugs.
+7. **Deploy e Documentação:** Publicação da aplicação e redação do README.
 
 ---
 
@@ -180,7 +207,11 @@ O projeto foi construído durante a maratona do hackathon acadêmico utilizando 
 
 | Foto | Nome | Função | Social |
 | :---: | :--- | :--- | :--- |
-| <img src="https://github.com/github.png" width="50" height="50"> | **Nome do Integrante 1** | Desenvolvedor Frontend | [GitHub](#) \| [LinkedIn](#) |
-| <img src="https://github.com/github.png" width="50" height="50"> | **Nome do Integrante 2** | UI/UX Designer / Frontend | [GitHub](#) \| [LinkedIn](#) |
-| <img src="https://github.com/github.png" width="50" height="50"> | **Nome do Integrante 3** | Desenvolvedor Frontend / Documentação | [GitHub](#) \| [LinkedIn](#) |
-| <img src="https://github.com/github.png" width="50" height="50"> | **Nome do Integrante 4** | Pesquisador ODS / QA | [GitHub](#) \| [LinkedIn](#) |
+| <img src="https://github.com/github.png" width="50" height="50"> | **Gabriel Camargo Gonçalves Silva** | Desenvolvedor Backend | [GitHub](https://github.com/gabrielcamargogsilva) |
+| <img src="https://github.com/github.png" width="50" height="50"> | **Enrico Emanuel Proença Batista** | UI/UX Designer / Frontend | [GitHub](https://github.com/w-tangly)|
+| <img src="https://github.com/github.png" width="50" height="50"> | **Jeniffer Camargo Oliveira** | Gestão do board e criação das issues | [GitHub](https://github.com/jenifferCamar) |
+| <img src="https://github.com/github.png" width="50" height="50"> | **Pedro Henrique Campos do Carmo** | Gestão da equipe, definição de tarefas e documentação  | [GitHub](https://github.com/w-tangly) |
+
+## Links extras
+### Repositório Backend
+[Link para o repositório Backend](https://github.com/gabrielcamargogsilva/hackathon_api.git)
