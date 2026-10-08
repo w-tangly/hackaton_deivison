@@ -122,6 +122,12 @@ export default function Trilha() {
           <NavLink to="/aprender" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
             <BookOpen size={20} strokeWidth={2.5} /> Aprender
           </NavLink>
+          <NavLink to="/quiz" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
+            Praticar
+          </NavLink>
+          <NavLink to="/flashcards" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
+            <BookMarked size={20} strokeWidth={2.5} /> Flashcards
+          </NavLink>
           <NavLink to="/ranking" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-500 hover:bg-slate-50 font-medium transition-colors">
             <BarChart2 size={20} strokeWidth={2.5} /> Ranking
           </NavLink>

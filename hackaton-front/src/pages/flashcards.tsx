@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { 
   Home, 
   BookOpen, 
@@ -17,7 +17,6 @@ import {
   Sparkles,
   Target,
   CheckCircle,
-  Star,
   BookMarked
 } from 'lucide-react';
 
@@ -40,6 +39,12 @@ interface Achievement {
   icon: string;
   unlocked: boolean;
   progress: string;
+}
+
+type FlashcardTab = 'inicio' | 'aprender' | 'ranking' | 'conquistas' | 'perfil';
+
+interface FlashcardsProps {
+  initialTab?: FlashcardTab;
 }
 
 const flashcardsData: Flashcard[] = [
@@ -107,8 +112,8 @@ const initialAchievements: Achievement[] = [
   { id: 4, title: "Poliglota da Pátria", desc: "Alinja 1.000 XP acumulados na plataforma", icon: "⚡", unlocked: true, progress: "980/1000" }
 ];
 
-export default function App() {
-  const [activeTab, setActiveTab] = useState<'inicio' | 'aprender' | 'ranking' | 'conquistas' | 'perfil'>('aprender');
+export default function Flashcards({ initialTab = 'aprender' }: FlashcardsProps) {
+  const [activeTab, setActiveTab] = useState<FlashcardTab>(initialTab);
   const [currentIndex, setCurrentIndex] = useState<number>(4); 
   const [totalCards] = useState<number>(15);
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
@@ -118,6 +123,21 @@ export default function App() {
   const [apiEndpoint, setApiEndpoint] = useState<string>(`'POST /flashcards/morf-004/revisar`);
 
   const currentCard = flashcardsData[(currentIndex - 4) % flashcardsData.length] || flashcardsData[0];
+
+  const handleAnswer = useCallback((type: 'nao-sabia' | 'eu-sabia') => {
+    setIsFlipped(false);
+    if (type === 'eu-sabia') {
+      setXp(prev => prev + 5);
+      setDominadosCount(prev => prev + 1);
+    }
+    if (currentIndex < totalCards) {
+      const nextIdx = currentIndex + 1;
+      setCurrentIndex(nextIdx);
+      setApiEndpoint(`POST /flashcards/morf-00${(nextIdx % 9) + 1}/revisar`);
+    } else {
+      setCurrentIndex(4);
+    }
+  }, [currentIndex, totalCards]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -132,22 +152,7 @@ export default function App() {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, isFlipped, activeTab]);
-
-  const handleAnswer = (type: 'nao-sabia' | 'eu-sabia') => {
-    setIsFlipped(false);
-    if (type === 'eu-sabia') {
-      setXp(prev => prev + 5);
-      setDominadosCount(prev => prev + 1);
-    }
-    if (currentIndex < totalCards) {
-      const nextIdx = currentIndex + 1;
-      setCurrentIndex(nextIdx);
-    setApiEndpoint(`POST /flashcards/morf-00${(nextIdx % 9) + 1}/revisar`);
-    } else {
-      setCurrentIndex(4); 
-    }
-  };
+  }, [activeTab, handleAnswer, isFlipped]);
 
   return (
     <div className="flex h-screen bg-[#F4F6F9] font-sans text-slate-800 overflow-hidden">
@@ -297,7 +302,7 @@ export default function App() {
               <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-6">
                 <div 
                   className="bg-blue-600 h-full rounded-full transition-all duration-300"
-                  style={{ width: ${(currentIndex / totalCards) * 100}% }}
+                  style={{ width: `${(currentIndex / totalCards) * 100}%` }}
                 ></div>
               </div>
             </div>
@@ -529,9 +534,9 @@ export default function App() {
                 { pos: 4, name: "Beatriz Lima", xp: 910, badge: "Estudante" },
                 { pos: 5, name: "Lucas Mendes", xp: 840, badge: "Estudante" }
               ].map((user, idx) => (
-                <div key={idx} className={flex items-center justify-between p-4 border-b border-slate-100 ${user.active ? 'bg-blue-50/60 font-bold' : ''}}>
+                <div key={idx} className={`flex items-center justify-between p-4 border-b border-slate-100 ${user.active ? 'bg-blue-50/60 font-bold' : ''}`}>
                   <div className="flex items-center gap-4">
-                    <span className={w-8 text-center font-bold text-sm ${idx < 3 ? 'text-amber-600' : 'text-slate-500'}}>#{user.pos}</span>
+                    <span className={`w-8 text-center font-bold text-sm ${idx < 3 ? 'text-amber-600' : 'text-slate-500'}`}>#{user.pos}</span>
                     <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-sm">👤</div>
                     <div>
                       <div className="text-slate-900 text-sm font-bold">{user.name}</div>
@@ -552,7 +557,7 @@ export default function App() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {initialAchievements.map((ach) => (
-                <div key={ach.id} className={p-5 rounded-2xl border flex items-center justify-between ${ach.unlocked ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-50 border-slate-200 opacity-70'}}>
+                <div key={ach.id} className={`p-5 rounded-2xl border flex items-center justify-between ${ach.unlocked ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-50 border-slate-200 opacity-70'}`}>
                   <div className="flex items-center gap-4">
                     <div className="text-3xl w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center border border-slate-200">
                       {ach.icon}
@@ -560,7 +565,7 @@ export default function App() {
                     <div>
                       <h3 className="font-bold text-slate-900 text-sm">{ach.title}</h3>
                       <p className="text-xs text-slate-500 mt-0.5">{ach.desc}</p>
-                      <span className={inline-block mt-2 text-[10px] font-extrabold px-2 py-0.5 rounded ${ach.unlocked ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-200 text-slate-600'}}>
+                      <span className={`inline-block mt-2 text-[10px] font-extrabold px-2 py-0.5 rounded ${ach.unlocked ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-200 text-slate-600'}`}>
                         {ach.progress}
                       </span>
                     </div>
