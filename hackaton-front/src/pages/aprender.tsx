@@ -43,6 +43,7 @@ export default function Aprender() {
           <NavLink to="/aprender">Aprender</NavLink>
           <NavLink to="/trilha">Trilha</NavLink>
           <NavLink to="/quiz">Praticar</NavLink>
+          <NavLink to="/flashcards">Flashcards</NavLink>
           <NavLink to="/ranking">Ranking</NavLink>
           <NavLink to="/conquistas">Conquistas</NavLink>
           <NavLink to="/perfil">Meu Perfil</NavLink>

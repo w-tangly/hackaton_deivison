@@ -15,6 +15,7 @@ const Sidebar: React.FC = () => {
     { path: '/aprender', label: 'Aprender', icon: 'menu_book' },
     { path: '/trilha', label: 'Trilha', icon: 'route' },
     { path: '/quiz', label: 'Praticar', icon: 'quiz' },
+    { path: '/flashcards', label: 'Flashcards', icon: 'style' },
     { path: '/ranking', label: 'Ranking', icon: 'leaderboard' },
     { path: '/conquistas', label: 'Conquistas', icon: 'military_tech' },
     { path: '/perfil', label: 'Meu Perfil', icon: 'person' },

@@ -4,6 +4,7 @@ import ModuleCard from './ModuleCard';
 import ActivityCard from './ActivityCard';
 import Toast from './Toast';
 import { usePlayer } from './usePlayer';
+import { useNavigate } from 'react-router-dom';
 
 const MODULES: ModuleProgress[] = [
   {
@@ -90,6 +91,7 @@ const DIFFICULTIES = [
 ];
 
 const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
   const [selectedQuizDiff, setSelectedQuizDiff] = useState<Difficulty>('facil');
   const [toast, setToast] = useState<{ visible: boolean; title: string; message: string; type: 'success' | 'loading' }>({
     visible: false,
@@ -113,6 +115,15 @@ const Dashboard: React.FC = () => {
   };
 
   const handleStartActivity = (activity: ActivityMode) => {
+    if (activity.id === 'flashcards') {
+      navigate('/flashcards');
+      return;
+    }
+    if (activity.id === 'quiz') {
+      navigate('/quiz');
+      return;
+    }
+
     const endpoint = `${API_BASE_URL}${activity.endpoint}`;
     const titleMap: Record<string, string> = {
       quiz: 'Iniciando Quiz de Português',
