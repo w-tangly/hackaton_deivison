@@ -174,16 +174,15 @@ Certifique-se de ter instalado em sua máquina:
 
 ## Protótipo
 
-O protótipo das telas e do fluxo de navegação foi desenvolvido no Figma:
-* [Link para o Protótipo no Figma](#) *(substitua pelo link real se houver)*
+O protótipo das telas e do fluxo de navegação foi desenvolvido no Stitch:
+* [Link para o Protótipo no stitch](https://stitch.google.com/projects/12329768009849964350?pli=1)
 
 ---
 
 ## Aplicação
-
 A versão final hospedada e aberta para testes pode ser acessada em:
-* [Link do Deploy (Vercel/Netlify)](#) *(substitua pelo link do deploy)*
-
+* [Link do Deploy (Vercel)](#)
+* [Link do Deploy (Render)](https://hackathonapi-two.vercel.app/)
 ---
 
 ## Processo de Desenvolvimento
@@ -191,7 +190,7 @@ A versão final hospedada e aberta para testes pode ser acessada em:
 O projeto foi construído durante a maratona do hackathon acadêmico utilizando o método **Kanban** para organização das tarefas e divisão dos componentes do Frontend:
 
 1. **Ideação e Alinhamento com a ODS 4:** Identificação do problema de aprendizagem gramatical.
-2. **Prototipagem UI/UX:** Definição da paleta de cores, tipografia acessível e layouts das telas no Figma.
+2. **Prototipagem UI/UX:** Definição da paleta de cores, tipografia acessível e layouts das telas no stitch.
 3. **Desenvolvimento Frontend:**
    * Construção da estrutura base e roteamento.
    * Componentização dos *Flashcards*, *Quiz* e *Lacunas*.
@@ -205,7 +204,7 @@ O projeto foi construído durante a maratona do hackathon acadêmico utilizando 
 
 | Foto | Nome | Função | Social |
 | :---: | :--- | :--- | :--- |
-| <img src="https://github.com/github.png" width="50" height="50"> | **Nome do Integrante 1** | Desenvolvedor Frontend | [GitHub](#) \| [LinkedIn](#) |
-| <img src="https://github.com/github.png" width="50" height="50"> | **Nome do Integrante 2** | UI/UX Designer / Frontend | [GitHub](#) \| [LinkedIn](#) |
-| <img src="https://github.com/github.png" width="50" height="50"> | **Nome do Integrante 3** | Desenvolvedor Frontend / Documentação | [GitHub](#) \| [LinkedIn](#) |
-| <img src="https://github.com/github.png" width="50" height="50"> | **Nome do Integrante 4** | Pesquisador ODS / QA | [GitHub](#) \| [LinkedIn](#) |
+| <img src="https://github.com/github.png" width="50" height="50"> | **Gabriel Camargo Gonçalves Silva** | Desenvolvedor Backend | [GitHub](https://github.com/gabrielcamargogsilva) |
+| <img src="https://github.com/github.png" width="50" height="50"> | **Enrico Emanuel Proença Batista** | UI/UX Designer / Frontend | [GitHub](https://github.com/w-tangly)|
+| <img src="https://github.com/github.png" width="50" height="50"> | **Jeniffer Camargo Oliveira** | Gestão do board e criação das issues | [GitHub](https://github.com/jenifferCamar) |
+| <img src="https://github.com/github.png" width="50" height="50"> | **Pedro Henrique Campos do Carmo** | Gestão da equipe, definição de tarefas e documentação  | [GitHub](https://github.com/w-tangly) |
