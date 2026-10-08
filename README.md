@@ -117,6 +117,18 @@ A tabela a seguir compara a proposta do **Hackaton_Gramatics** com 5 plataformas
 * **Bundler & Build Tool:** Vite
 * **Controle de Versão:** Git & GitHub
 
+### Inteligência Artificial
+
+Ferramenta: Claude, Kilo Code (Laguna S 2.1), Chat GPT, Google Stitch 
+
+Utilização:
+- geração de ideias;
+- auxílio e geração de componentes do código;
+- revisão de código;
+- identificação de erros;
+- testes de backend e APIs
+- automação e criação de cards no board do github projects
+- auxílio na documentação
 ---
 
 ## Framework Utilizado
@@ -182,8 +194,12 @@ O projeto foi construído durante a maratona do hackathon acadêmico utilizando 
    * Construção da estrutura base e roteamento.
    * Componentização dos *Flashcards*, *Quiz* e *Lacunas*.
    * Estilização responsiva.
-4. **Testes de Usabilidade e Ajustes:** Revisão de feedback visual e correção de bugs.
-5. **Deploy e Documentação:** Publicação da aplicação e redação do README.
+4. **Desenvolvimento Backend:**
+   * Construção da estrutura base do banco de dados e do backend
+   * Alimentação do banco de dados
+   * Criação e testes das APIs de acesso ao backend
+6. **Testes de Usabilidade e Ajustes:** Revisão de feedback visual e correção de bugs.
+7. **Deploy e Documentação:** Publicação da aplicação e redação do README.
 
 ---
 
@@ -195,3 +211,7 @@ O projeto foi construído durante a maratona do hackathon acadêmico utilizando 
 | <img src="https://github.com/github.png" width="50" height="50"> | **Enrico Emanuel Proença Batista** | UI/UX Designer / Frontend | [GitHub](https://github.com/w-tangly)|
 | <img src="https://github.com/github.png" width="50" height="50"> | **Jeniffer Camargo Oliveira** | Gestão do board e criação das issues | [GitHub](https://github.com/jenifferCamar) |
 | <img src="https://github.com/github.png" width="50" height="50"> | **Pedro Henrique Campos do Carmo** | Gestão da equipe, definição de tarefas e documentação  | [GitHub](https://github.com/w-tangly) |
+
+## Links extras
+### Repositório Backend
+[Link para o repositório Backend](https://github.com/gabrielcamargogsilva/hackathon_api.git)
